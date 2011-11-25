@@ -18,7 +18,7 @@
     <tr>
     
      <td><h3> <%= dish.name %></h3>  </td> 
-     <td>  <%= link_to "Рецепт", '#'%></td>
+     <td>  <%= link_to "Рецепт", recipe_path(:id => dish)%></td>
     <% end %>
   <% else %>
     <h3> В этой категории пока нет блюд </h3>

@@ -3,4 +3,6 @@ class Dish < ActiveRecord::Base
 
 	scope :presents, where(:deleted => false)
 
+	validates_presence_of :name, :recipe
+
 end

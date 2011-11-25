@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
   
   def home
   	@categories = Category.presents
-  	#@dishes = Dishes.present
+  	#@dishes = Dishes.presents
   end
   # GET /categories
   # GET /categories.xml

@@ -5,6 +5,7 @@ Cookery::Application.routes.draw do
 
   root :to => "categories#home"
 
+  match '/recipe', :to => "dishes#recipe"
 
 
   # The priority is based upon order of creation:

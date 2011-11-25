@@ -10,6 +10,12 @@ class DishesController < ApplicationController
     end
   end
 
+  def recipe
+  	@dish = Dish.find(params[:id])
+
+   #render 'recipe'
+  end
+
   # GET /dishes/1
   # GET /dishes/1.xml
   def show
