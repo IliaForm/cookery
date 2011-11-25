@@ -1,0 +1,22 @@
+<h1>Кулинарная книга</h1>
+
+<table>
+  <tr>
+    <th>Категории блюд</th>
+  </tr>
+
+ <%= image_tag("blyudo1.jpg")%>
+
+ <%= link_to 'Создать новую категорию блюд', new_category_path %>
+
+<% @categories.each do |category| %>
+  <tr>
+    <td><h3><%= link_to "#{category.name}", category %></h3></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<%= link_to 'Создать новую категорию блюд', new_category_path %>
+
+

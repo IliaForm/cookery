@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @dish.name %>
+</p>
+
+<p>
+  <b>Recipe:</b>
+  <%= @dish.recipe %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @dish.category_id%>
+</p>
+
+
+<%= link_to 'Edit', edit_dish_path(@dish) %> |
+<%= link_to 'Back', dishes_path %>
+<%= link_to 'Destroy', @dish, :confirm => 'Are you sure?', :method => :delete %>

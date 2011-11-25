@@ -1,0 +1,27 @@
+<h1>Кулинарная книга</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Recipe</th>
+    <th>Category</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @dishes.each do |dish| %>
+  <tr>
+    <td><%= dish.name %></td>
+    <td><%= dish.recipe %></td>
+    <td><%= dish.category.name %></td>
+    <td><%= link_to 'Show', dish %></td>
+    <td><%= link_to 'Edit', edit_dish_path(dish) %></td>
+    <td><%= link_to 'Destroy', dish, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Dish', new_dish_path %>
