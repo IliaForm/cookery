@@ -17,7 +17,7 @@
     <% @category.dishes.each do |dish| %>
     <tr>
     
-     <td><h3> <%= dish.name %></h3>  </td> 
+     <td><h3> <%=dish.name %></h3>  </td> 
      <td>  <%= link_to "Рецепт", recipe_path(:id => dish)%></td>
     <% end %>
   <% else %>

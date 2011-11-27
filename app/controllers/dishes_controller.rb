@@ -52,8 +52,8 @@ class DishesController < ApplicationController
 
     respond_to do |format|
       if @dish.save
-        format.html { redirect_to(@dish, :notice => 'Dish was successfully created.') }
-        format.xml  { render :xml => @dish, :status => :created, :location => @dish }
+        format.html { redirect_to(dishes_path, :notice => 'Dish was successfully created.') }
+        format.xml  { render :xml => @dish, :status => :created, :location => dishes_path }
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @dish.errors, :status => :unprocessable_entity }
@@ -68,7 +68,7 @@ class DishesController < ApplicationController
 
     respond_to do |format|
       if @dish.update_attributes(params[:dish])
-        format.html { redirect_to(@dish, :notice => 'Dish was successfully updated.') }
+        format.html { redirect_to(dishes_path, :notice => 'Dish was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -87,6 +87,7 @@ class DishesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(dishes_url) }
       format.xml  { head :ok }
+      format.js { render :partial => "ajax", :collections => @dish}
     end
   end
 end

@@ -7,9 +7,13 @@
 
 <p>
   <b>В категории:</b>
-  <%= @dish.category_id%>
+  <%= @dish.category.name%>
 </p>
 
+<p>
+   <b> Рецепт:</b>
+   <span class="content"><%= word_wrap(@dish.recipe, :line_width => 52) %></span>
+</p>
 
 <%= link_to 'Редактировать', edit_dish_path(@dish) %> |
 <%= link_to 'Назад ', dishes_path %>|

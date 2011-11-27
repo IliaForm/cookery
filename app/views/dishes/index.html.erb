@@ -1,22 +1,10 @@
 <h1>Блюда</h1>
+<table class = "dish_list">
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<%= render 'ajax'%>
 
-<% @dishes.each do |dish| %>
-  <tr>
-    <td><h3><%= link_to "#{dish.name}", dish %></h3></td>
-    <td><%= dish.category.name %></td>
-  </tr>
-    <td><%= link_to "рецепт", recipe_path(:id => dish)%></td>
-  </tr>
-<% end %>
 </table>
-
+ 
 <br />
 
 <%= link_to 'Добавить новое блюдо', new_dish_path %>

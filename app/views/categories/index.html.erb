@@ -1,14 +1,11 @@
-<h1>Кулинарная книга</h1>
+<h1>Категории блюд</h1>
 
 <table>
-  <tr>
-    <th>Категории блюд</th>
-  </tr>
 
 <% @categories.each do |category| %>
   <tr>
-    <td><h3><%= link_to "#{category.name}", category %></h3></td>
-  </tr>
+    <td><h3><%= link_to "#{category.name}  ", category %></h3></td>
+    <td><%= link_to "   блюдо в эту категорию", new_dish_path(:id => category)%></td>
 <% end %>
 </table>
 
