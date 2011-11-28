@@ -10,6 +10,10 @@ class DishesController < ApplicationController
     end
   end
 
+  def sort
+  	@dishes = Dish.presents.order(:name)
+  end
+
   def recipe
   	@dish = Dish.find(params[:id])
 

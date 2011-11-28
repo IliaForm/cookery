@@ -1,4 +1,10 @@
+  <tr>
+    <th><%= link_to "Название", sort_path %></th>
+
+  </tr>
+
 <% @dishes.each do |dish| %>
+
   <tr>
     <td><h3><%= link_to "#{dish.name}", dish %></h3></td>
     <td><h3><%= link_to "Удалить", dish, :method => :delete, :confirm => "Are you sure?", :remote => true %></h3></td>

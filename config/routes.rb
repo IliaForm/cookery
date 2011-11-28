@@ -7,6 +7,8 @@ Cookery::Application.routes.draw do
 
   match '/recipe', :to => "dishes#recipe"
 
+  match '/sort', :to => "dishes#sort"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
