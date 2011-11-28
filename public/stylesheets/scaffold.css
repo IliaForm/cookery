@@ -12,6 +12,10 @@ pre {
   font-size: 11px;
 }
 
+header b {
+	font-size: 190%;
+}
+
 a { color: #003399; }
 a:visited { color: #003399; }
 a:hover {

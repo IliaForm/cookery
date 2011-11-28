@@ -22,7 +22,7 @@
   </div>
   <div class="field">
     <%= f.label "Категория" %><br />
-  <%=  select("dish", "category_id", Category.all.collect {|c| [ c.name, c.id ] }, {:disabled => 'restricted'}, {:include_blank => false})%>
+  <%=  select("dish", "category_id", Category.presents.all.collect {|c| [ c.name, c.id ] }, {:disabled => 'restricted'}, {:include_blank => false})%>
 
   </div>
   <%= javascript_tag do %>setInterval(CheckLength, 1000)<% end %> 

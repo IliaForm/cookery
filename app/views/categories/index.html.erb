@@ -5,11 +5,12 @@
 <% @categories.each do |category| %>
   <tr>
     <td><h3><%= link_to "#{category.name}  ", category %></h3></td>
-    <td><%= link_to "   блюдо в эту категорию", new_dish_path(:id => category)%></td>
+    <td><h3><%= link_to "   блюдо в эту категорию", new_dish_path(:id => category)%></h3></td>
 <% end %>
 </table>
 
 <br />
-<%= link_to 'Создать новую категорию блюд', new_category_path %>
+
+<h3><%= link_to 'Создать новую категорию блюд', new_category_path %></h3>
 
 

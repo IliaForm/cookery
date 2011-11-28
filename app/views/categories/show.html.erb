@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <h1><%= @category.name %></h1> <%= link_to 'Править', edit_category_path(@category) %> |
-   <%= link_to 'Назад', categories_path %> | <%= link_to 'Удалить', @category, :confirm => 'Вы уверены? Все блюда, находящиеся в этой категории будут удалены', :method => :delete %>
+  <h1><%= @category.name %></h1> <h3><%= link_to 'Править', edit_category_path(@category) %> |
+   <%= link_to 'Назад', categories_path %> | <%= link_to 'Удалить', @category, :confirm => 'Вы уверены? Все блюда, находящиеся в этой категории будут удалены', :method => :delete %></h3>
 </p>
 
 <p>
@@ -14,14 +14,15 @@
     <th></th>
   </tr>
   
-    <% @category.dishes.each do |dish| %>
+    <% @category.dishes.presents.each do |dish| %>
     <tr>
     
      <td><h3> <%=dish.name %></h3>  </td> 
-     <td>  <%= link_to "Рецепт", recipe_path(:id => dish)%></td>
+     <td><h3>  <%= link_to "Рецепт", recipe_path(:id => dish)%></h3></td>
     <% end %>
   <% else %>
     <h3> В этой категории пока нет блюд </h3>
   <%end%>
 </p>
-<%= link_to 'Создать новую категорию блюд', new_category_path %>
+
+<h3><%= link_to 'Создать новую категорию блюд', new_category_path %></h3>

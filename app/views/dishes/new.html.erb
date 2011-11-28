@@ -1,5 +1,8 @@
 <h1>Новое блюдо</h1>
+<% if Category.presents.empty? %>
+ <h2> Сначала созайте категорию <h2>
+<% else %>
+ <%= render 'form' %>
+<% end %>
 
-<%= render 'form' %>
-
-<%= link_to 'Назад', dishes_path %>
+<h3><%= link_to 'Назад', dishes_path %></h3>

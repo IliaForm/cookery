@@ -1,20 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<p><h3>
   <b>Название:</b>
   <%= @dish.name %>
-</p>
+</h3></p>
 
-<p>
+<p><h3>
   <b>В категории:</b>
   <%= @dish.category.name%>
-</p>
+</h3></p>
 
-<p>
+<p><h3>
    <b> Рецепт:</b>
    <span class="content"><%= word_wrap(@dish.recipe, :line_width => 52) %></span>
-</p>
+</h3></p>
 
-<%= link_to 'Редактировать', edit_dish_path(@dish) %> |
+<h3><%= link_to 'Редактировать', edit_dish_path(@dish) %> |
 <%= link_to 'Назад ', dishes_path %>|
-<%= link_to 'Удалить', @dish, :confirm => 'Are you sure?', :method => :delete %>
+<%= link_to 'Удалить', @dish, :confirm => 'Are you sure?', :method => :delete %></h3>

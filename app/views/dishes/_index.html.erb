@@ -1,9 +1,9 @@
 <% @dishes.each do |dish| %>
-  <tr>    
+  <tr>
     <td><h3><%= link_to "#{dish.name}", dish %></h3></td>
-    <td><%= link_to "Удалить", dish, :method => :delete, :confirm => "Are you sure?", :remote => true %></td>
-    <td><%= dish.category.name %></td>
-    <td><%= link_to "рецепт", recipe_path(:id => dish)%></td>
+    <td><h3><%= link_to "Удалить", dish, :method => :delete, :confirm => "Are you sure?", :remote => true %></h3></td>
+    <td><h3><%= dish.category.name %></h3></td>
+    <td><h3><%= link_to "рецепт", recipe_path(:id => dish)%></h3></td>
   </tr>
 
 <% end %>
