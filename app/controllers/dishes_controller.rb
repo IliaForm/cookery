@@ -83,11 +83,12 @@ class DishesController < ApplicationController
     @dish = Dish.find(params[:id])
     @dish.deleted = true
     @dish.save!
+    @dishes = Dish.presents
 
     respond_to do |format|
       format.html { redirect_to(dishes_url) }
       format.xml  { head :ok }
-      format.js { render :partial => "ajax", :collections => @dish}
+      format.js 
     end
   end
 end
