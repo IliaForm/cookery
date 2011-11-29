@@ -1,14 +1,14 @@
 <h1>Блюда</h1>
+<% if @dishes.empty? %>
+ <h3>Пока нет блюд</h3>
+<% else %>
 <table id = "dish_list">
-  <tr>
-    <th><%= link_to "Название", sort_path %></th>
 
-  </tr>
 
 <%= render :partial => 'index'%>
 
 </table>
  
 <br />
-
+<% end %>
 <h3><%= link_to 'Добавить новое блюдо', new_dish_path %></h3>

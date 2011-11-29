@@ -12,6 +12,10 @@ class DishesController < ApplicationController
 
   def sort
   	@dishes = Dish.presents.order(:name)
+
+  	respond_to do |format|
+  		format.js
+  	end
   end
 
   def recipe
